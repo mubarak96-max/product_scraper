@@ -8,17 +8,27 @@ export async function generateProductInfo(rawText: string): Promise<ProductData>
         throw new Error('OPENROUTER_API_KEY is not defined in .env.local');
     }
 
-    const prompt = `Analyze this product page text and return ONLY a JSON object (no markdown, no explanation).
+    const prompt = `ACT AS an expert e-commerce copywriter.
+    
+    GOAL: Transform the raw product text below into high-converting marketing copy.
+    
+    INSTRUCTIONS:
+    1. Tone: writes like a human, not a robot. Use simple, everyday words (Grade 8 reading level). Avoid "AI clichés" like "unleash," "elevate," "unlock," "masterpiece," "symphony," or "game-changer."
+    2. Title: Create a catchy, clear product title.
+    3. Description: Write a persuasive 3-4 sentence paragraph. Focus on BENEFITS. Address pain points. Be direct and authentic.
+    4. Features: Extract 4-6 key selling points. Keep them EXTREMELY SHORT (max 6 words). Must fit on one line on mobile.
+    
+    CRITICAL OUTPUT RULE: Return ONLY valid, parseable JSON. Do not wrap in markdown code blocks.
+    
+    Required JSON Format:
+    {
+      "title": "Your optimized title",
+      "description": "Your persuasive description",
+      "features": ["Short Feature 1", "Short Feature 2", "Short Feature 3", "Short Feature 4"]
+    }
 
-Format:
-{
-  "title": "Short catchy product name",
-  "description": "3 sentence SEO-optimized description",
-  "features": ["Feature 1", "Feature 2", "Feature 3", "Feature 4"]
-}
-
-Product Text:
-${rawText.slice(0, 4000)}`;
+    Raw Product Text:
+    ${rawText.slice(0, 4000)}`;
 
     console.log('Sending request to OpenRouter...');
 
