@@ -36,6 +36,13 @@ Maximum 6 words each (must fit one line on mobile)
 Lead with benefit, not technical spec
 Example: "Charges fully in 30 minutes" NOT "Fast-charging technology"
 
+Customer Reviews: (3-4 reviews)
+
+Create realistic reviews from Indian, Pakistani, Arab and Filipino customers (use culturally appropriate names)
+Vary the ratings (mostly 5, maybe one 4)
+Keep reviews short and authentic (1-2 sentences)
+Format: name, rating, review
+
 IMPORTANT:
 
 Benefits = what the customer gains ("saves you 2 hours daily")
@@ -48,7 +55,14 @@ Always prioritize benefits
     {
       "title": "Your optimized title",
       "description": "Your persuasive description",
-      "features": ["Short bullet point 1", "Short bullet point 2", "Short bullet point 3", "Short bullet point 4"]
+      "features": ["Short bullet point 1", "Short bullet point 2", "Short bullet point 3", "Short bullet point 4"],
+      "reviews": [
+        {
+            "name": "Customer Name",
+            "rating": 5,
+            "review": "Short review text here"
+        }
+      ]
     }
 
     Raw Product Text:

@@ -111,6 +111,32 @@ export default function Home() {
                 ))}
               </ul>
             </div>
+
+            {/* Customer Reviews */}
+            {result.reviews && result.reviews.length > 0 && (
+              <div>
+                <h3 className="text-sm font-bold text-gray-400 uppercase tracking-wider mb-2">
+                  Customer Reviews
+                </h3>
+                <div className="space-y-4">
+                  {result.reviews.map((review, index) => (
+                    <div key={index} className="bg-white p-4 rounded-lg border border-gray-200 shadow-sm">
+                      <div className="flex items-center justify-between mb-2">
+                        <span className="font-bold text-gray-800">{review.name}</span>
+                        <div className="flex text-yellow-400 text-lg">
+                          {[...Array(5)].map((_, i) => (
+                            <span key={i}>
+                              {i < review.rating ? '★' : '☆'}
+                            </span>
+                          ))}
+                        </div>
+                      </div>
+                      <p className="text-gray-600 text-sm leading-relaxed">"{review.review}"</p>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            )}
           </div>
         )}
       </div>
