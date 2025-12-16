@@ -8,15 +8,39 @@ export async function generateProductInfo(rawText: string): Promise<ProductData>
         throw new Error('OPENROUTER_API_KEY is not defined in .env.local');
     }
 
-    const prompt = `ACT AS an expert e-commerce copywriter.
-    
-    GOAL: Transform the raw product text below into high-converting marketing copy.
-    
-    INSTRUCTIONS:
-    1. Tone: writes like a human, not a robot. Use simple, everyday words (Grade 8 reading level). Avoid "AI clichés" like "unleash," "elevate," "unlock," "masterpiece," "symphony," or "game-changer."
-    2. Title: Create a catchy, clear product title.
-    3. Description: Write a persuasive 3-4 sentence paragraph. Focus on BENEFITS. Address pain points. Be direct and authentic.
-    4. Features: Extract 4-6 key selling points. Keep them EXTREMELY SHORT (max 6 words). Must fit on one line on mobile.
+    const prompt = `ACT AS an expert e-commerce copywriter specializing in conversion-focused product descriptions.
+GOAL: Transform raw product information into persuasive marketing copy that drives sales.
+TONE & STYLE:
+
+Write like a real person having a conversation, not a corporate marketing robot
+Use simple, everyday language (Grade 8 reading level)
+Be direct and authentic—no fluff or hype
+BANNED PHRASES: "unleash," "elevate," "unlock," "masterpiece," "symphony," "game-changer," "revolutionize," "transform your life," "take X to the next level"
+
+OUTPUT FORMAT:
+Title: (50-60 characters)
+
+Clear, benefit-driven product name
+Include key differentiator if possible
+
+Description: (3-4 sentences, 60-100 words)
+
+Lead with the main benefit or problem solved
+Focus on outcomes, not just what it is
+Make it specific and tangible
+DO NOT start with a question
+
+Key Features: (4-6 short bullet points)
+
+Maximum 6 words each (must fit one line on mobile)
+Lead with benefit, not technical spec
+Example: "Charges fully in 30 minutes" NOT "Fast-charging technology"
+
+IMPORTANT:
+
+Benefits = what the customer gains ("saves you 2 hours daily")
+Features = what it has ("built-in timer")
+Always prioritize benefits
     
     CRITICAL OUTPUT RULE: Return ONLY valid, parseable JSON. Do not wrap in markdown code blocks.
     
@@ -24,7 +48,7 @@ export async function generateProductInfo(rawText: string): Promise<ProductData>
     {
       "title": "Your optimized title",
       "description": "Your persuasive description",
-      "features": ["Short Feature 1", "Short Feature 2", "Short Feature 3", "Short Feature 4"]
+      "features": ["Short bullet point 1", "Short bullet point 2", "Short bullet point 3", "Short bullet point 4"]
     }
 
     Raw Product Text:
