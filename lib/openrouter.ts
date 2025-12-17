@@ -38,9 +38,13 @@ Example: "Charges fully in 30 minutes" NOT "Fast-charging technology"
 
 Customer Reviews: (3-4 reviews)
 
-Create realistic reviews from Indian, Lebanese, Pakistani, Arab and Filipino customers (use culturally appropriate names)
-Vary the ratings (mostly 5, maybe one 4)
-Keep reviews short and authentic (1-2 sentences)
+Create realistic "Verified Purchase" style reviews from Indian, Lebanese, African, Pakistani, Arab and Filipino customers (use culturally appropriate names)
+Vary the ratings (mostly 5, maybe one 4).
+Make them sound authentic like real Amazon reviews:
+- Mention specific details (delivery, packaging, specific features).
+- Some can be short (1 sentence), others slightly longer (2-3 sentences).
+- Include personal anecdotes or specific usage contexts (e.g., "Used it while commuting to Deira").
+- Allow for natural, conversational language (not perfect marketing speak).
 Format: name, rating, review, imagePrompt
 
 For each review, generate a "imagePrompt" field:
