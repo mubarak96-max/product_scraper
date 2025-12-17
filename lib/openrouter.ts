@@ -38,10 +38,17 @@ Example: "Charges fully in 30 minutes" NOT "Fast-charging technology"
 
 Customer Reviews: (3-4 reviews)
 
-Create realistic reviews from Indian, Pakistani, Arab and Filipino customers (use culturally appropriate names)
+Create realistic reviews from Indian, Lebanese, Pakistani, Arab and Filipino customers (use culturally appropriate names)
 Vary the ratings (mostly 5, maybe one 4)
 Keep reviews short and authentic (1-2 sentences)
-Format: name, rating, review
+Format: name, rating, review, imagePrompt
+
+For each review, generate a "imagePrompt" field:
+- Describe a realistic User Generated Content (UGC) photo representing the review
+- **CRITICAL: The setting MUST be in REAL Dubai environments** (e.g., inside shared apartments/bedspaces, on the Dubai Metro, inside a public bus, regular office desks, or inside malls). Avoid overly luxury settings unless appropriate for the product. Aim for a "day-in-the-life" authentic vibe.
+- Describe the setting, lighting, and how the product appears (amateur phone photo style)
+-The image should be 1200 x 900 in dimension
+- Keep it descriptive but concise
 
 IMPORTANT:
 
@@ -60,7 +67,8 @@ Always prioritize benefits
         {
             "name": "Customer Name",
             "rating": 5,
-            "review": "Short review text here"
+            "review": "Short review text here",
+            "imagePrompt": "A dimly lit bedroom showing the product on a nightstand..."
         }
       ]
     }

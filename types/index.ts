@@ -7,6 +7,7 @@ export interface ProductData {
         name: string;
         rating: number;
         review: string;
+        imagePrompt: string;
     }[];
 }
 

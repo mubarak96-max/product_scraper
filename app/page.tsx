@@ -132,6 +132,12 @@ export default function Home() {
                         </div>
                       </div>
                       <p className="text-gray-600 text-sm leading-relaxed">"{review.review}"</p>
+                      {review.imagePrompt && (
+                        <div className="mt-3 pt-3 border-t border-gray-100">
+                          <span className="text-xs font-semibold text-gray-500 uppercase">📸 UGC Image Prompt:</span>
+                          <p className="text-gray-500 text-xs italic mt-1">{review.imagePrompt}</p>
+                        </div>
+                      )}
                     </div>
                   ))}
                 </div>
