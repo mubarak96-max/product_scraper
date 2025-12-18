@@ -38,7 +38,7 @@ Example: "Charges fully in 30 minutes" NOT "Fast-charging technology"
 
 Customer Reviews: (3-4 reviews)
 
-Create realistic "Verified Purchase" style reviews from Indian, Lebanese, African, Pakistani, Arab and Filipino customers (use culturally appropriate names)
+Create realistic "Verified Purchase" style reviews from Indian, Asian, African, Pakistani, Arab and Filipino customers (use culturally appropriate names)
 Vary the ratings (mostly 5, maybe one 4).
 Make them sound authentic like real Amazon reviews:
 - Mention specific details (delivery, packaging, specific features).
@@ -91,7 +91,7 @@ Always prioritize benefits
             'X-Title': 'Product Generator Tool',
         },
         body: JSON.stringify({
-            model: "google/gemini-2.5-flash",
+            model: "google/gemini-3-pro-preview",
             messages: [
                 { role: "user", content: prompt }
             ]
