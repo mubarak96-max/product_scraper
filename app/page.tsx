@@ -112,6 +112,23 @@ export default function Home() {
               </ul>
             </div>
 
+            {/* FAQ Section */}
+            {result.faq && result.faq.length > 0 && (
+              <div>
+                <h3 className="text-sm font-bold text-gray-400 uppercase tracking-wider mb-2">
+                  Frequently Asked Questions
+                </h3>
+                <div className="space-y-3">
+                  {result.faq.map((item, index) => (
+                    <div key={index} className="bg-gray-50 p-4 rounded-lg border border-gray-100">
+                      <p className="font-semibold text-gray-800 mb-1">Q: {item.question}</p>
+                      <p className="text-gray-600 text-sm">A: {item.answer}</p>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            )}
+
             {/* Customer Reviews */}
             {result.reviews && result.reviews.length > 0 && (
               <div>

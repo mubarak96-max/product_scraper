@@ -36,9 +36,15 @@ Maximum 6 words each (must fit one line on mobile)
 Lead with benefit, not technical spec
 Example: "Charges fully in 30 minutes" NOT "Fast-charging technology"
 
-Customer Reviews: (3-4 reviews)
+Frequently Asked Questions: (4-6 items)
 
-Create realistic "Verified Purchase" style reviews from Indian, Asian, African, Pakistani, Arab and Filipino customers (use culturally appropriate names)
+Address common concerns or objections
+Keep answers short and reassuring
+Focus on usage, compatibility, or care instructions
+
+Customer Reviews: (4-6 reviews)
+
+Create realistic "Verified Purchase" style reviews from Indian, Asian, African, Arab, European and Filipino customers (use culturally appropriate names)
 Vary the ratings (mostly 5, maybe one 4).
 Make them sound authentic like real Amazon reviews:
 - Mention specific details (delivery, packaging, specific features).
@@ -67,6 +73,12 @@ Always prioritize benefits
       "title": "Your optimized title",
       "description": "Your persuasive description",
       "features": ["Short bullet point 1", "Short bullet point 2", "Short bullet point 3", "Short bullet point 4"],
+      "faq": [
+        {
+            "question": "Common question here?",
+            "answer": "Helpful answer here."
+        }
+      ],
       "reviews": [
         {
             "name": "Customer Name",

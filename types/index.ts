@@ -3,6 +3,10 @@ export interface ProductData {
     title: string;
     description: string;
     features: string[];
+    faq: {
+        question: string;
+        answer: string;
+    }[];
     reviews: {
         name: string;
         rating: number;
