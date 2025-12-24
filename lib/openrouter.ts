@@ -57,8 +57,15 @@ For each review, generate a "imagePrompt" field:
 - Describe a realistic User Generated Content (UGC) photo representing the review
 - **CRITICAL: The setting MUST be in REAL Dubai environments** (e.g., inside shared apartments/bedspaces, on the Dubai Metro, inside a public bus, regular office desks, or inside malls). Avoid overly luxury settings unless appropriate for the product. Aim for a "day-in-the-life" authentic vibe.
 - Describe the setting, lighting, and how the product appears (amateur phone photo style)
--The image should be 1200 x 900 in dimension
+- The image should be 1200 x 900 in dimension
 - Keep it descriptive but concise
+
+3 Reasons to Buy: (3 items)
+
+- Identify the top 3 most compelling reasons a customer should purchase this product immediately.
+- Focus on emotional benefits, scarcity, or unique value props.
+- Format: VERY SHORT phrase, 3-5 words MAX. Must fit on one line on mobile.
+
 
 IMPORTANT:
 
@@ -78,6 +85,11 @@ Always prioritize benefits
             "question": "Common question here?",
             "answer": "Helpful answer here."
         }
+      ],
+      "reasonsToBuy": [
+        "First compelling reason to buy.",
+        "Second compelling reason to buy.",
+        "Third compelling reason to buy."
       ],
       "reviews": [
         {

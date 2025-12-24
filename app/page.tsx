@@ -112,6 +112,27 @@ export default function Home() {
               </ul>
             </div>
 
+            {/* Reasons to Buy */}
+            {result.reasonsToBuy && result.reasonsToBuy.length > 0 && (
+              <div className="bg-gradient-to-br from-blue-50 to-white p-6 rounded-lg border border-blue-100 shadow-sm">
+                <h3 className="text-sm font-bold text-gray-400 uppercase tracking-wider mb-4">
+                  3 Main Reasons to Buy
+                </h3>
+                <ul className="space-y-3">
+                  {result.reasonsToBuy.map((reason, index) => (
+                    <li key={index} className="flex items-start">
+                      <span className="bg-blue-100 text-blue-600 font-bold rounded-full w-6 h-6 flex-shrink-0 flex items-center justify-center text-xs mr-3 mt-0.5">
+                        {index + 1}
+                      </span>
+                      <p className="text-gray-700 font-medium text-sm leading-relaxed">
+                        {reason}
+                      </p>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            )}
+
             {/* FAQ Section */}
             {result.faq && result.faq.length > 0 && (
               <div>

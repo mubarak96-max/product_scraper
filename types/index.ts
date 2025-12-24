@@ -7,6 +7,7 @@ export interface ProductData {
         question: string;
         answer: string;
     }[];
+    reasonsToBuy: string[];
     reviews: {
         name: string;
         rating: number;
