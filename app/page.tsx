@@ -184,6 +184,7 @@ export default function Home() {
           </div>
         )}
       </div>
+      <a href="https://dxblifer.com">DXBLifer</a>
     </main>
   );
 }
